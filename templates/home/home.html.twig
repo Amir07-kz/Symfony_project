@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    {#  стили чет не подрубались подключаем на прямую  #}
+    {#    <link rel="stylesheet" href="./../../public/styles/home.css">#}
+
+    <meta property="og:title" content="Заголовок страницы в OG">
+    <meta property="og:description" content="Описание страницы в OG">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/">
+</head>
+<body>
+<header class="topbar">
+    <div class="container">
+        <div class="logo">🧠 МойСайт</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Обо мне</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="{{ path('app_register') }}">Регистрация</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <article>
+        <section>
+            <h2>Первая секция</h2>
+            <p>Она обо мне</p>
+            <p>Но может быть и о семантике, я пока не решил.</p>
+        </section>
+        <section>
+            <h2>Вторая секция</h2>
+            <p>Она тоже обо мне</p>
+        </section>
+        <section>
+            <h2>И третья</h2>
+            <p>Вы уже должны были начать догадываться.</p>
+        </section>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 МойСайт. Все права защищены.</p>
+        <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Личный блог</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .topbar {
+        background-color: #1e1e2f;
+        color: white;
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .topbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .main-nav a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .main-nav a:hover {
+        color: #ffcc00;
+    }
+
+    /* Main Content */
+    main {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    main h2 {
+        margin-top: 20px;
+        color: #1e1e2f;
+    }
+
+    main img {
+        max-width: 100%;
+        margin: 15px 0;
+        border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #1e1e2f;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 10px 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #ffcc00;
+    }
+
+</style>
+</html>
